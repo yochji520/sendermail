@@ -1,0 +1,16 @@
+{
+	"http":{
+		"enable":true,
+		"listen":"0.0.0.0:3215"
+	},
+	"mail":{
+		"enable" : true,
+		"sendConcurrent" : 5,
+		"maxQueueSize" : 1000,
+		"fromUser" : "youchuanjiang@wanbei.tv",
+		"mailServerHost" : "smtp.ym.163.com",
+		"mailServerPort" : 465,
+		"mailServerAccount" : "youchuanjiang@wanbei.tv",
+		"mailServerPasswd" : "wuhuan42@123.A"
+	}
+}
