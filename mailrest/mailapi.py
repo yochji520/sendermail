@@ -6,14 +6,17 @@ from rest_framework import permissions
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from urllib.parse import unquote
-from mailrest.test import *
 from mailrest.sendmail import *
 
 
 @csrf_exempt
 @api_view(http_method_names=['post', 'get'])
 @permission_classes((permissions.AllowAny,))
-def revdata(request):
+def receiverdata(request):
+    '''
+    :param request:alarm的请求
+    :return: 返回发送成功
+    '''
     if request.method == 'GET':
         return Response('''welcome to sendermail!!!''')
     elif request.method == 'POST':
@@ -24,7 +27,6 @@ def revdata(request):
         subject = strlist[1]
         content = strlist[2]
         sendmail(tomail, subject, content)
-        a(par_str)
-        return Response(par_str)
+        return Response("sendermail is ok！！！")
     else:
         pass

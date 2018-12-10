@@ -16,10 +16,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from mailrest.mailapi import revdata
+from mailrest.mailapi import receiverdata
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mailrest', revdata)
+    path('mailrest', receiverdata)
 ]
