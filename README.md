@@ -25,7 +25,9 @@
     
 
     python3 bin/control.py start &
+    
     python3 bin/control.py stop
+    
     python3 bin/control.py restart &
     
     
